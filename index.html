@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Hekatate Combat Template Maker</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <script src="script.js" async defer></script>
+
+<div class="container">
+    <div class="text">
+       Quick Combat Template
+    </div>
+    <form action="#">
+       <div class="form-row">
+          <div class="input-data">
+             <input type="number" id="hp" required>
+             <div class="underline"></div>
+             <label for="">HP</label>
+          </div>
+          <div class="input-data">
+             <input type="number" id="maxhp" required>
+             <div class="underline"></div>
+             <label for="">Max HP</label>
+          </div>
+       </div>
+       <div class="form-row">
+          <div class="input-data">
+             <input type="number" id="ep" required>
+             <div class="underline"></div>
+             <label for="">EP</label>
+          </div>
+          <div class="input-data">
+             <input type="number" id="maxep" required>
+             <div class="underline"></div>
+             <label for="">Max EP</label>
+          </div>
+       </div>
+       <div class="form-row">
+       <div class="input-data textarea">
+          <textarea rows="8" cols="80" id="charname" required></textarea>
+          <br />
+          <div class="underline"></div>
+          <label for="">Character Name</label>
+          <br />
+          <div class="form-row submit-btn">
+             <div class="input-data">
+                <div class="inner"></div>
+                <input type="button" value="Create" onclick="updateText(
+                    document.getElementById('charname').value,
+                    document.getElementById('maxhp').value,
+                    document.getElementById('hp').value,
+                    document.getElementById('maxep').value,
+                    document.getElementById('ep').value,
+                )">
+             </div>
+          </div>
+    </form>
+    </div>
+
+    <div class="container">
+        <p id="output">Copy paste the text that appears here.</p>
+    </div>
+    
+    </body>
+</html>
